@@ -1,0 +1,221 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E6EEBFD3173DFEE80097A4B9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EEBFD2173DFEE80097A4B9 /* main.cpp */; };
+		E6EEBFD5173DFEE80097A4B9 /* AndroidMKiller.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6EEBFD4173DFEE80097A4B9 /* AndroidMKiller.1 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E6EEBFCD173DFEE80097A4B9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				E6EEBFD5173DFEE80097A4B9 /* AndroidMKiller.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E6EEBFCF173DFEE80097A4B9 /* AndroidMKiller */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AndroidMKiller; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6EEBFD2173DFEE80097A4B9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		E6EEBFD4173DFEE80097A4B9 /* AndroidMKiller.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = AndroidMKiller.1; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E6EEBFCC173DFEE80097A4B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E6EEBFC6173DFEE80097A4B9 = {
+			isa = PBXGroup;
+			children = (
+				E6EEBFD1173DFEE80097A4B9 /* AndroidMKiller */,
+				E6EEBFD0173DFEE80097A4B9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E6EEBFD0173DFEE80097A4B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E6EEBFCF173DFEE80097A4B9 /* AndroidMKiller */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E6EEBFD1173DFEE80097A4B9 /* AndroidMKiller */ = {
+			isa = PBXGroup;
+			children = (
+				E6EEBFD2173DFEE80097A4B9 /* main.cpp */,
+				E6EEBFD4173DFEE80097A4B9 /* AndroidMKiller.1 */,
+			);
+			path = AndroidMKiller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E6EEBFCE173DFEE80097A4B9 /* AndroidMKiller */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6EEBFD8173DFEE80097A4B9 /* Build configuration list for PBXNativeTarget "AndroidMKiller" */;
+			buildPhases = (
+				E6EEBFCB173DFEE80097A4B9 /* Sources */,
+				E6EEBFCC173DFEE80097A4B9 /* Frameworks */,
+				E6EEBFCD173DFEE80097A4B9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AndroidMKiller;
+			productName = AndroidMKiller;
+			productReference = E6EEBFCF173DFEE80097A4B9 /* AndroidMKiller */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E6EEBFC7173DFEE80097A4B9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Ghost;
+			};
+			buildConfigurationList = E6EEBFCA173DFEE80097A4B9 /* Build configuration list for PBXProject "AndroidMKiller" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E6EEBFC6173DFEE80097A4B9;
+			productRefGroup = E6EEBFD0173DFEE80097A4B9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E6EEBFCE173DFEE80097A4B9 /* AndroidMKiller */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E6EEBFCB173DFEE80097A4B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6EEBFD3173DFEE80097A4B9 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E6EEBFD6173DFEE80097A4B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E6EEBFD7173DFEE80097A4B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E6EEBFD9173DFEE80097A4B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E6EEBFDA173DFEE80097A4B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E6EEBFCA173DFEE80097A4B9 /* Build configuration list for PBXProject "AndroidMKiller" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6EEBFD6173DFEE80097A4B9 /* Debug */,
+				E6EEBFD7173DFEE80097A4B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6EEBFD8173DFEE80097A4B9 /* Build configuration list for PBXNativeTarget "AndroidMKiller" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6EEBFD9173DFEE80097A4B9 /* Debug */,
+				E6EEBFDA173DFEE80097A4B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E6EEBFC7173DFEE80097A4B9 /* Project object */;
+}
