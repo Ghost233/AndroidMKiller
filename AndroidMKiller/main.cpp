@@ -38,6 +38,8 @@ string tail = "\n\
 LOCAL_WHOLE_STATIC_LIBRARIES := cocos2dx_static cocosdenshion_static cocos_extension_static\n\
 LOCAL_WHOLE_STATIC_LIBRARIES += box2d_static\n\
 \n\
+LOCAL_CFLAGS := -fexceptions\n\
+\n\
 include $(BUILD_SHARED_LIBRARY)\n\
 \n\
 $(call import-module,CocosDenshion/android) \n\
@@ -47,13 +49,14 @@ $(call import-module,external/Box2D)\n";
 
 string final = "";
 
-void scan_folder(const char* folder_path);
+void scan_folder(const char* folder_path, int depth);
 
 int main(int argc,char* argv[])
 {
     cppFile.clear();
     hFile.clear();
-	scan_folder(FolderPath);
+    chdir("../../Classes/");
+	scan_folder(FolderPath, 0);
     
     final += head;
     for (int i = 0 ; i < cppFile.size() - 1 ; ++i)
@@ -76,7 +79,7 @@ int main(int argc,char* argv[])
     
     final += tail;
     
-    printf("%s", final.c_str());
+//    printf("%s", final.c_str());
     
     chdir("proj.android/jni");
     
@@ -92,23 +95,28 @@ int main(int argc,char* argv[])
  @param folder_path 文件夹的路径
  */
 
-void scan_folder(const char* folder_path)
+void scan_folder(const char* folder_path, int depth)
 {
+    printf("enter %s", folder_path);
     string tempString(folder_path);
     tempString.erase(tempString.length() - 1);
     string hFileTempString = "$(LOCAL_PATH)/" + prefix + tempString;
     hFile.push_back(hFileTempString);
     
-    chdir("../../Classes/");
+    for (int i = 0 ; i < depth - 1 ; ++i)
+    {
+        chdir("../");   
+    }
     
 	/*
      打开一个目录并建立一个目录流,返回一个指向DIR结构的指针，
      该指针用于读取目录数据项.
      */
-	DIR* dp = opendir(folder_path);
+    string newPath = folder_path;
+	DIR* dp = opendir(newPath.c_str());
 	if(NULL == dp)
 	{
-		fprintf(stderr,"cannot open directory:%s\n",folder_path);
+		fprintf(stderr,"cannot open directory:%s    %s\n",folder_path, strerror(errno));
 		return ;
 	}
     
@@ -123,7 +131,7 @@ void scan_folder(const char* folder_path)
 	while(NULL != (entry = readdir(dp)))
 	{
 		lstat(entry->d_name,&statbuf);
-        
+        printf("%s\n", entry->d_name);
 		if(S_ISDIR(statbuf.st_mode))
 		{
 			if(strcmp(".",entry->d_name) == 0 || strcmp("..",entry->d_name) == 0)
@@ -135,7 +143,7 @@ void scan_folder(const char* folder_path)
 			strcat(tempStr,entry->d_name);
 			strcat(tempStr,"/");
 			//fprintf(stdout,"before:%s\n",tempStr);
-			scan_folder(tempStr);
+			scan_folder(tempStr, depth + 1);
 		}
 		else
 		{
@@ -148,7 +156,6 @@ void scan_folder(const char* folder_path)
             //			fprintf(stdout,"%s%s\n",folder_path,entry->d_name);
 		}
 	}
-	chdir("..");
-    
+    chdir("../");    
 	closedir(dp);//关闭一个目录流并释放与之关联的资源
 }
